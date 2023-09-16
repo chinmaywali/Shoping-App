@@ -1,0 +1,321 @@
+<HomeScreen>:
+	MDScrollView:
+		MDBoxLayout:
+			orientation: 'vertical'
+			size_hint_y:1.7
+
+			MDBoxLayout:
+				padding:10
+				spacing:1
+				size_hint_y:0.35
+				md_bg_color:"orange"
+
+				MDTextField:
+					size_hint_x:0.6
+					mode:"fill"
+					hint_text:"Search"
+					background_color: "white"
+
+				MDIconButton:
+					icon:"bell-outline"
+					theme_icon_color: "Custom"
+					icon_color:"white"
+
+				MDIconButton:
+					icon:"heart-outline"
+					theme_icon_color: "Custom"
+					icon_color:"white"
+
+				MDIconButton:
+					icon:"cart-outline"
+					theme_icon_color: "Custom"
+					icon_color:"white"
+
+			# NOW CREATE CAROUSEL IMAGE
+			MDScrollView:
+				# FOR DISABLE y AXIS SCROLL
+				do_scroll_y:False
+				MDBoxLayout:
+					# SET WIDTH OF YOU BOX
+					size_hint_x:4
+					FitImage:
+						source:"image2.jpg"
+					FitImage:
+						source:"image3.jpg"
+					FitImage:
+						source:"image1.png"
+
+			# CREATE ICON MENU LIKE SHOP OR BALANCE
+			MDBoxLayout:
+				padding:10
+				spacing:10
+				size_hint_y:0.3
+
+				# AND CREATE 3 CARD
+				# LIKE QRCODE
+				MDCard:
+					size_hint_x:0.4
+					MDAnchorLayout:
+						anchor_x: 'center'
+						anchor_y:"center"
+						MDIcon:
+							icon:"qrcode"
+							halign:"center"
+							valign:"middle"
+
+				# CREATE BALANCE
+				MDCard:
+
+					MDBoxLayout:
+						padding:10
+						MDIcon:
+							icon:"wallet-outline"
+							color:"blue"
+							halign:"right"
+							pos_hint: {'center_y': 0.5}
+						MDLabel:
+							# CREATE TEXT BALANCE
+							text:"$ 100"
+							halign:"center"
+							valign:"middle"
+				MDCard:
+
+					MDBoxLayout:
+						padding:10
+						MDIcon:
+							icon:"hand-coin"
+							halign:"right"
+							color:"orange"
+							pos_hint:{"center_y":0.5}
+
+						# CREATE text 1 coin
+						MDLabel:
+							text:"1 coin"
+							halign:"center"
+							valign:"middle"
+
+			MDBoxLayout:
+				size_hint_y:0.3
+				padding:10
+				spacing:2
+				MDBoxLayout:
+					spacing:12
+					orientation:"vertical"
+
+					# CREATE 6 ICON
+					MDIcon:
+						icon:"store-outline"
+						color:"#D1553E"
+						# AND SET SIZE OF ICON
+						font_size: 30
+						pos_hint:{"center_x":0.5}
+
+					MDLabel:
+						text:"Home \n store"
+						color:"grey"
+						font_size:11
+						halign:"center"
+				MDBoxLayout:
+					spacing:12
+					orientation:"vertical"
+
+					# CREATE 6 ICON
+					MDIcon:
+						icon:"apps"
+						color:"#15A190"
+						# AND SET SIZE OF ICON
+						font_size: 30
+						pos_hint:{"center_x":0.5}
+
+					MDLabel:
+						text:"Apps"
+						color:"grey"
+						font_size:13
+						halign:"center"
+
+				MDBoxLayout:
+					spacing:12
+					orientation:"vertical"
+
+					# CREATE 6 ICON
+					MDIcon:
+						icon:"basket"
+						color:"#C9051C"
+						# AND SET SIZE OF ICON
+						font_size: 30
+						pos_hint:{"center_x":0.5}
+
+					MDLabel:
+						text:"Shop"
+						color:"grey"
+						font_size:13
+						halign:"center"
+
+				MDBoxLayout:
+					spacing:12
+					orientation:"vertical"
+
+					# CREATE 6 ICON
+					MDIcon:
+						icon:"cart-outline"
+						color:"#C9051C"
+						# AND SET SIZE OF ICON
+						font_size: 30
+						pos_hint:{"center_x":0.5}
+
+					MDLabel:
+						text:"Shopping \n mall"
+						color:"grey"
+						font_size:13
+						halign:"center"
+
+				MDBoxLayout:
+					spacing:12
+					orientation:"vertical"
+
+					# CREATE 6 ICON
+					MDIcon:
+						icon:"hanger"
+						color:"#449ED0"
+						# AND SET SIZE OF ICON
+						font_size: 30
+						pos_hint:{"center_x":0.5}
+
+					MDLabel:
+						text:"Clothes"
+						color:"grey"
+						font_size:13
+						halign:"center"
+
+				MDBoxLayout:
+					spacing:12
+					orientation:"vertical"
+
+					# CREATE 6 ICON
+					MDIcon:
+						icon:"account-group"
+						color:"#449ED0"
+						# AND SET SIZE OF ICON
+						font_size: 30
+						pos_hint:{"center_x":0.5}
+
+					MDLabel:
+						text:"Clothes"
+						color:"grey"
+						font_size:13
+						halign:"center"
+
+			# CREATE IMAGE PROMO
+
+			MDBoxLayout:
+				size_hint_y:0.9
+				padding:10
+				spacing:10
+				MDBoxLayout:
+					radius:20
+					md_bg_color:"#EE4C2E"
+					size_hint_x:1.6
+					padding:20
+
+					# AND CREATE IMAGE
+					FitImage:
+						source:"image4.jpg"
+				MDBoxLayout:
+					radius:20
+					md_bg_color:"#EE4C2E"
+
+					padding:20
+
+					# AND CREATE IMAGE
+					FitImage:
+						source:"image5.jpg"
+
+			# CREATE FLASH SALE TEXT
+			MDBoxLayout:
+				size_hint_y:0.3
+				MDIcon:
+					icon:"flash"
+					font_size:40
+					color:"orange"
+					pos_hint:{"center_y":0.5}
+
+				MDLabel:
+					text:"Flash sale"
+					font_size:20
+					color:"orange"
+					bold:True
+					font_style:"H6"
+
+				MDBoxLayout:
+					padding:10
+					MDLabel:
+						text:"Offers"
+						color:"grey"
+						halign:"right"
+
+			# CREATE HORIZONTAL SCROLL
+			# FOR PRODUCT AND PRICE
+			MDScrollView:
+				do_scroll_y:False
+				do_scroll_x:True
+
+				MDBoxLayout:
+					size_hint_x:1.5
+					size_hint_y:1
+					orientation:"horizontal"
+					MDCard:
+						size_hint_x:0.3
+
+						MDBoxLayout:
+							orientation:"vertical"
+							FitImage:
+								source:"hp.png"
+								size_hint_y:1.5
+								size_hint_x:0.8
+								pos_hint:{"center_y":0.47,"center_x":0.5}
+							MDLabel:
+								text:"$.20"
+								color:"orange"
+								font_size:30
+								halign:"center"
+								pos_hint:{"center_y":0.97,"center_x":0.5}
+								bold:True
+					MDCard:
+						size_hint_x:0.3
+
+						MDBoxLayout:
+							orientation:"vertical"
+							FitImage:
+								source:"hp2.jpg"
+								size_hint_y:1.2
+								size_hint_x:0.4
+								pos_hint:{"center_y":0.47,"center_x":0.5}
+							MDLabel:
+								text:"$.20"
+								color:"orange"
+								font_size:30
+								halign:"center"
+								pos_hint:{"center_y":0.97,"center_x":0.5}
+								bold:True
+
+
+			# CREATE SPACE BOTTOM
+			MDBoxLayout:
+				orientation:"vertical"
+				size_hint_y:0.9
+
+			# NOW LAST CREATE BOTOOM BAR
+	MDBottomAppBar:
+		md_bg_color:"orange"
+
+		# CREATE TOPAPPBAR
+
+
+		MDTopAppBar:
+            icon:"chat"
+            md_bg_color: "orange"  # Customize the background color as needed
+            left_action_items: [["home", lambda x: app.navigate_home()], ["gift-outline", lambda x: app.open_gift-outline()]]
+
+            right_action_items: [["trending-up", lambda x: app.start_shopping_search()], ["account-circle", lambda x: app.open_account()]]
+
+            icon_color:"orange"
