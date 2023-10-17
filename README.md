@@ -1,7 +1,7 @@
 # Shoping-App
 
 
-----
+---- 
 
 ## Screenshots 
 
